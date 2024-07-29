@@ -105,4 +105,4 @@ def delete_user(user: User):
         users.delete_one({"username": user.username})
         return {"message": "User deleted successfully"}
     else:
-        raise HTTPException(status_code=400, detail="User not found")
+        raise HTTPException(status_code=400, detail="Invalid User")
